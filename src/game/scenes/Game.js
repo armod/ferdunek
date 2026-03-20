@@ -1,28 +1,40 @@
-import { Scene } from 'phaser';
+import { Scene } from 'phaser'
 
-export class Game extends Scene
-{
-    constructor ()
-    {
-        super('Game');
-    }
+export class Game extends Scene {
+  constructor() {
+    super('Game')
+  }
 
-    create ()
-    {
-        this.cameras.main.setBackgroundColor(0x00ff00);
+  create() {
+    //definiujemy paramatry mapy
+    const tileWidth = 32
+    const tileHeight = 32
+    const mapWidth = 1024
+    const mapHeight = 768
 
-        this.add.image(512, 384, 'background').setAlpha(0.5);
+    //wyliczamy środek ekranu, aby tam postawic siatkę
+    const x = mapWidth / 2
+    const y = mapHeight / 2
 
-        this.add.text(512, 384, 'Make something fun!\nand share it with us:\nsupport@phaser.io', {
-            fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
-            stroke: '#000000', strokeThickness: 8,
-            align: 'center'
-        }).setOrigin(0.5);
+    //tworzymy siatkę (Grid)
+    // Parametry: x, y, szerokość, wysokość, szerokość_komórki, wysokość_komórki,
+    // kolor_wypełnienia, przezroczystość_wypełnienia, kolor_linii, przezroczystość_linii
+    this.add
+      .grid(
+        x,
+        y,
+        mapWidth,
+        mapHeight,
+        tileWidth,
+        tileHeight,
+        0x5d4037,
+        1,
+        0x000000,
+        1,
+      )
+      .setOrigin(0.5)
 
-        this.input.once('pointerdown', () => {
-
-            this.scene.start('GameOver');
-
-        });
-    }
+    //opcjonalny tekst
+    this.add.text(10, 10, 'test', { color: '#fff' })
+  }
 }
