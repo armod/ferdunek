@@ -6,11 +6,17 @@ export class Game extends Scene {
   }
 
   create() {
-    const map = this.make.tilemap({ key: 'mapa' })
+    const map = this.make.tilemap({
+      key: 'mapa',
+      tileWidth: 16,
+      tileHeight: 16,
+    })
 
     const tileset = map.addTilesetImage('tileset', 'tiles')
 
     const grundLayer = map.createLayer('warstwa1', tileset, 0, 0)
+    // map.createLayer('warstwa1', tileset, 0, 0)
+    // grundLayer.setScale(2)
 
     //definiujemy paramatry mapy
     // const tileWidth = 16
@@ -28,6 +34,6 @@ export class Game extends Scene {
     // this.add.tileSprite(x, y, mapWidth, mapHeight, 'calizna')
 
     //opcjonalny tekst
-    // this.add.text(10, 10, 'test', { color: '#fff' })
+    this.add.text(10, 10, 'test', { color: '#fff' })
   }
 }
