@@ -10,8 +10,11 @@ export class Preloader extends Scene {
   preload() {
     this.load.setPath('assets')
 
-    this.load.image('calizna', 'calizna.png')
-    this.load.image('wyrobisko', 'wyrobisko.png')
+    this.load.image('tiles', 'tileste.png')
+    this.load.tilemapTiledJSON('mapa', 'mapa.json')
+
+    // this.load.image('calizna', 'calizna.png')
+    // this.load.image('wyrobisko', 'wyrobisko.png')
   }
 
   create() {

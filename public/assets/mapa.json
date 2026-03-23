@@ -4,25 +4,11 @@
  "layers":[
         {
          "compression":"zlib",
-         "data":"eJxjZGBgYBzFo3gUj+IhhA2hmF78gbLXcITh0fgd3nikxS8AAvsomQ==",
+         "data":"eJxjZGBgYBzFo3gUj+IhhA2hmF78gbLXcITh0fgd3Dh\/NH5J4gMATJso1w==",
          "encoding":"base64",
          "height":20,
          "id":4,
-         "name":"Warstwa Kafelk\u00f3w 1",
-         "opacity":1,
-         "type":"tilelayer",
-         "visible":true,
-         "width":30,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "compression":"zlib",
-         "data":"eJxjYBgFo2AUjIJRMApGwSjAD\/IH2gFDDAAAjTAAcA==",
-         "encoding":"base64",
-         "height":20,
-         "id":5,
-         "name":"Warstwa Kafelk\u00f3w 2",
+         "name":"warstwa1",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
