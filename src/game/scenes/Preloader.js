@@ -13,6 +13,8 @@ export class Preloader extends Scene {
     this.load.image('tiles', 'tileset.png')
     this.load.tilemapTiledJSON('mapa', 'mapa.json')
 
+    this.load.image('toro', 'toro.png')
+
     // this.load.image('calizna', 'calizna.png')
     // this.load.image('wyrobisko', 'wyrobisko.png')
   }
