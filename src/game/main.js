@@ -19,6 +19,7 @@ const config = {
   },
   physics: {
     default: 'arcade', // Włączamy silnik Arcade
+    arcade: { debug: true },
   },
   scene: [Boot, Preloader, MainMenu, MainGame, GameOver],
 }
